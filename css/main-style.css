@@ -1,0 +1,362 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Oswald:wght@200..700&family=Pacifico&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Fredoka:wght@600;700&display=swap');
+
+/* LÊNH import là dẫn link font từ google vào style*/
+
+body
+{
+	background-color:#ECECEC; /*màu nền của trang web*/
+	font-family: 'Be Vietnam Pro', sans-serif;
+	color: #423F3F; /*màu chữ cho body text*/
+	font-size: 16px	 
+}
+h1,h2,h3,h4,h5,h6,h7{margin-top: 0; margin-bottom: 5px}
+
+h1
+{
+	font-size: 36px;
+	font-family: 'Be Vietnam Pro', sans-serif;
+}
+h2{ font-size: 34px; color: #DB2427; font-family: 'Baloo 2', 'Fredoka', sans-serif;}
+h3{ font-size: 32px; color: #327CB3}
+h4{ font-size: 30px}
+h5{ font-size: 24px}
+h6{ font-size: 18px}
+h7{ font-size: 12px}
+
+/*.subtitle
+{
+	 font-family: "Chewy", system-ui;
+}*/
+
+
+/* Dùng cho subtitle */
+.subtitle {
+  font-family: 'Baloo 2', 'Fredoka', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #FFC107;
+}
+.container 
+{
+	width: 80%;
+	margin: auto;
+}
+*{ box-sizing: border-box} /* yêu cầu tất cả các box có viền hoặc padding đều inside*/
+.col-1{ width: 8.33%} /* .col-1: 100%/12 phần=8.33%*/
+.col-2{ width: 16.66%}
+.col-3{ width: 25%}
+.col-4{ width: 33.33%}
+.col-5{ width: 41.66%}
+.col-6{ width: 50%}
+.col-7{ width: 58.33%}
+.col-8{ width: 66.66%}
+.col-9{ width: 75%}
+.col-10{ width: 83.33%}
+.col-11{ width: 91.66%}
+.col-12{ width: 100%}
+[class*="col-"]
+{
+	/*border: 1px solid red;*/
+	padding: 16px
+}
+.row
+{
+	display: flex;
+	flex-wrap: wrap
+}
+/*he thong luoi 12 cot medium cho tablet 600-1000px*/
+@media (min-width:600px)
+{
+.col-md-1 {width: 8.33%}
+.col-md-2 {width: 16.66%}
+.col-md-3 {width: 25%}
+.col-md-4 {width: 33.33%}
+.col-md-5 {width: 41.66%}
+.col-md-6 {width: 50%}
+.col-md-7 {width: 58.33%}
+.col-md-8 {width: 66.66%}
+.col-md-9 {width: 75%}
+.col-md-10 {width: 83.33%}
+.col-md-11 {width: 91.66%}
+.col-md-12 {width: 100%}
+}
+/*he thong luoi 12 cot large cho pc 1000px tro len*/
+@media (min-width:1000px)
+{
+.col-lg-1 {width: 8.33%}
+.col-lg-2 {width: 16.66%}
+.col-lg-3 {width: 25%}
+.col-lg-4 {width: 33.33%}
+.col-lg-5 {width: 41.66%}
+.col-lg-6 {width: 50%}
+.col-lg-7 {width: 58.33%}
+.col-lg-8 {width: 66.66%}
+.col-lg-9 {width: 75%}
+.col-lg-10 {width: 83.33%}
+.col-lg-11 {width: 91.66%}
+.col-lg-12 {width: 100%}
+}
+
+/*chinh cac item trong file theo chieu doc*/
+.align-items-end { align-items: flex-start} /*sat tren*/
+.align-items-center { align-items: center} /*o giua chieu doc*/
+.align-items-end { align-items: flex-end} /*sat chan*/
+
+/*chinh cac item trong file theo chieu doc*/
+.justify-start { justify-content: flex-start}
+.justify-center { justify-content: center}
+.justify-end { justify-content: flex-end}
+.justify-between { justify-content: space-between}
+.justify-around { justify-content: space-around}
+
+/* chinh cho anh full 100% voi box*/
+.img-100{ width: 100%; height: auto}
+
+.btn-menu{
+	position: absolute; 
+	right: 0; top: 0;
+	cursor: pointer;
+	background: #A0A09B;
+	font-weight: bold;
+	font-style: 20px;
+	padding: 6px;
+	border: none;
+    z-index: 2}
+ul.menu{
+	margin: 0;
+	margin-top: 15px;
+	padding: 0;
+	list-style: none /*bo cham dau dong*/;
+    display: none}
+ul.menu li{
+	position: relative}
+ul.menu li a{
+	text-decoration: none/*bo gach chan*/;
+	background-color: #00DFFB;
+	color: #FDF2F2;
+	display: block;
+	padding: 10px;
+	margin: 1px;}
+@media (min-width: 1000px)
+{
+	.btn-menu{display: none}
+	ul.menu{
+		display: flex !important;
+		margin-top: 0}
+}
+
+.text-center{text-align:center}
+.box-center{margin: auto}
+
+.bg-footer
+{
+	background-color: #D3D3D3 ;
+	padding-top: 50px;
+	padding-bottom: 50px
+}
+/*-- tao 1 hệ thống màu (chính:primary/phụ:secondary/body-text/sáng:light/tối:dard/báo thành công:success/báo lỗi:danger)*/
+.text-primary {color: #E90E13}
+.text-secondary {color: #ff5733}
+.text-dark {color: #423F3F}
+.text-light {color: #EEE}
+.text-body {color: #424141}
+.text-success {color:greenyellow}
+.text-danger {color: red}
+.text-heading {color: #E65100}
+.text-gradient {
+	background-image: linear-gradient(180deg,rgba(230, 81, 0, 1) 0%, rgba(255, 193, 7, 1) 100%);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+}
+/*--style hệ thống màu nền cho web*/
+.bg-primary {background-color: #E90E13}
+.bg-secondary {background-color: #FFF200}
+.bg-dark {background-color: #000;}
+.bg-light {background-color: #eee}
+.bg-white {background-color: #fff}
+.bg-success {background-color:greenyellow}
+.bg-danger {background-color: red}
+.bg-gradient{background-image: linear-gradient(90deg,rgba(230, 81, 0, 1) 0%, rgba(255, 193, 7, 1) 100%);}
+
+.box-shadow-1{ box-shadow:2px 2px 5px rgba(0,0,0,0.3)}
+.text-shadow{text-shadow: 4px 4px 10px rgba(0,0,0,0.2)}
+/*----style hệ thống màu cho nút*/
+a{ 
+	color: red; 
+	text-decoration: none; /*bỏ gạch chân*/
+	font-weight: bold
+}
+a:hover
+{
+	color: #7B0507; 
+	font-weight: bold
+}
+.btn-primary {
+	background-color: #FFC107;
+	color: #eeeeee;
+	border-radius: 50px;  /*bo góc 4 chiều*/
+	padding: 8px 16px;
+	font-weight: 600;
+	transition: all 0.5s;
+	border: none
+		
+}
+.btn-primary:hover
+{
+	background-color: red;
+	color: #fff
+}
+/*nút chỉ có đường viền và khi hover mới fill lên*/
+.btn-outline-primary {
+	border: 1px solid #ff5733;
+	color: #ff5733;
+	border-radius: 50px; /*bo góc 4 chiều*/
+	padding: 8px 16px;
+	font-weight: 600;
+	transition: all 1s;
+	background: transparent
+	
+}
+.btn-outline-primary:hover
+{
+	background-color:#ff5733;
+	color: #fff;
+}
+
+/*-------------navbar style----------------*/
+.navbar{border-bottom: solid 2px #ff5733}
+.navbar ul 
+{
+	margin: 0; /*bỏ khoảng cách từ biên ngoài của box ul*/
+	padding: 0; /*bỏ khoảng cách từ biên trong của box ul*/
+	list-style: none; /*bỏ chấm đầu dòng*/
+	display: flex
+}
+.navbar ul li
+{
+	
+}
+
+.navbar ul li a
+{
+	padding: 8px 16px;
+	background: linear-gradient(90deg,rgba(230, 81, 0, 1) 0%, rgba(255, 193, 7, 1) 100%);
+	background-color: burlywood;
+	color: #eee;
+	margin: 5px;
+	display: block;
+}
+.navbar ul li a:hover
+{
+	padding: 8px 16px;
+	background: radial-gradient(circle,rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+	background-color: #E8171B;
+	color: #eee;
+	margin: 5px
+}
+
+.card {
+  background: #fff;              /* nền trắng */
+  border-radius: 12px;           /* bo góc */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* shadow */
+  padding: 20px;                 /* khoảng cách bên trong */
+  /*margin: 15px;*/                  /* khoảng cách giữa các card */
+	flex: 1;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);   /* nhích lên khi hover */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.card img {
+  width: 100%;                   /* ảnh full khung */
+  /*border-radius: 10px 10px 0 0; */ /* bo góc trên */
+	height: 200px;        /* cố định chiều cao ảnh */
+  object-fit: cover    /* giữ tỉ lệ, crop nếu cần */
+}
+
+.card h6 {
+  color: #ff5733;                /* đổi màu title */
+  margin: 15px 0 10px;
+}
+
+.card p {
+  color: #555;
+  line-height: 1.5;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #ff5733;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+	border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.box img {
+  width: 100%;                   /* ảnh full khung */
+  /*border-radius: 10px 10px 0 0; */ /* bo góc trên */
+	height: 200px;        /* cố định chiều cao ảnh */
+  object-fit: cover    /* giữ tỉ lệ, crop nếu cần */
+}
+.form-control /*text box*/
+{
+	width: 100%; 
+	border: #ddd solid 1px; 
+	padding: 8px;
+	border-radius: 8px;
+	margin-top: 8px;
+	margin-bottom: 12px
+}
+
+label{margin-left: 4px; font-weight: 500}
+
+.campus-info {
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  color: #111;
+}
+
+.location {
+  margin-bottom: 30px;
+}
+
+.location h5 {color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid #111;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.branch {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
